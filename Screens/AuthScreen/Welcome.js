@@ -11,10 +11,6 @@ import {
   TouchableOpacity,
   Button
 } from 'react-native';
-// import * as Animatable from 'react-native-animatable'
-// import AsyncStorage from '@react-native-async-storage/async-storage';
-// import Button from '../../components/Button'
-// import SecondaryBtn from '../../components/SecondaryBtn';
 const image = {uri: 'https://reactjs.org/logo-og.png'};
 const {width, height} = Dimensions.get('screen');
 const Welcome = ({navigation}) => {

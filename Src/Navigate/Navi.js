@@ -1,10 +1,8 @@
 import React, { useState, useContext, useEffect } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import AppStack from './AppStack';
-import { AuthContext } from './AuthProvider';
 import AuthStack from './AuthStack';
-import Splash from '../screens/authScreens/Splash';
+import Splash from '../../Screens/AuthScreen/Splash'
 
 const Routes = () => {
     const [userToken,setUserToken]= useState(true)
@@ -20,7 +18,7 @@ const Routes = () => {
     else return (
         <NavigationContainer>
             {
-                !userToken
+                userToken
                     ?
                     <AuthStack /> :
                     <AppStack />
