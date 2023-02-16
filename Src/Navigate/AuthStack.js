@@ -20,17 +20,17 @@ const AuthStack = () => {
       <Stack.Screen
         name="Welcome"
         component={Welcome}
-        // options={{headerShown: false}}
+        options={{headerShown: false}}
       />
       <Stack.Screen
         name="Register"
         component={Register}
-        options={{headerShown: false}}
+        // options={{headerShown: false}}
       />
       <Stack.Screen
         name="Forgot"
         component={Forgot}
-        options={{headerShown: false}}
+        // options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

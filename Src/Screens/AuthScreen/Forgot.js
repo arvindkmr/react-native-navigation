@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Forgot = () => {
+const Forgot = ({navigation}) => {
   return (
     <View>
       <Text>Forgot Password</Text>

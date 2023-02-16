@@ -11,30 +11,48 @@ import {
   ScrollView,
   Image,
 } from 'react-native';
-import {Input} from '@rneui/themed';
 
-const Login = () => {
+const Login = ({navigation}) => {
+  const [text, onChangeText] = React.useState('Useless Text');
+  const [number, onChangeNumber] = React.useState('');
   return (
     <View>
-      <Input placeholder=" Email" style={{marginBottom: 10}} />
-      <Input placeholder="Password" style={{marginBottom: 10}} />
-      <TouchableOpacity>
-        <Button
-          title="Log in"
-          width={'80%'}
-          onPress={() => navigation.navigate('Welcome')}
-        />
-      </TouchableOpacity>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeNumber}
+        value={number}
+        placeholder="useless placeholder"
+        keyboardType="numeric"
+      />
+
+      <Button
+        title="Log in"
+        width={'80%'}
+        onPress={() => navigation.navigate('Home')}
+      />
+
       <Button
         title="Forgot password"
         width={'80%'}
-        onPress={() => navigation.navigate('welcome')}
+        onPress={() => navigation.navigate('Forgot')}
       />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+
   contentScroll: {
     display: 'flex',
     height: '100%',

@@ -5,7 +5,7 @@ import AuthStack from './AuthStack';
 import Splash from '../Screens/AuthScreen/Splash';
 
 const Navig = () => {
-  const [userToken, setUserToken] = useState(true);
+  const [userToken, setUserToken] = useState(false);
 
   const [splash, setSplash] = useState(true);
 
