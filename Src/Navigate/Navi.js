@@ -1,30 +1,34 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { NavigationContainer } from '@react-navigation/native';
+import React, {useState, useContext, useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import AppStack from './AppStack';
 import AuthStack from './AuthStack';
-import Splash from '../../Screens/AuthScreen/Splash'
+import Splash from '../../Screens/AuthScreen/Splash';
 
-const Routes = () => {
-    const [userToken,setUserToken]= useState(true)
+const Navig = () => {
+  const [userToken, setUserToken] = useState(true);
 
-    const [splash, setSplash] = useState(true)
+  //   const [splash, setSplash] = useState(true);
 
-    useEffect(() => {
-        let timeOut = setTimeout(() => { setSplash(false) }, 1500)
-        return () => clearTimeout(timeOut)
-    }, [])
+  //   useEffect(() => {
+  //     let timeOut = setTimeout(() => {
+  //       setSplash(false);
+  //     }, 1500);
+  //     return () => clearTimeout(timeOut);
+  //   }, []);
 
-    if (splash) return <Splash />
-    else return (
-        <NavigationContainer>
-            {
+  //   if (splash) return <Splash />;
+  //   else
+  return (
+    <NavigationContainer>
+      {/* {
                 userToken
                     ?
                     <AuthStack /> :
                     <AppStack />
-            }
-        </NavigationContainer >
-    )
-}
+                } */}
+      <AuthStack />
+    </NavigationContainer>
+  );
+};
 
-export default Routes
+export default Navig;

@@ -7,11 +7,8 @@ import {
   PixelRatio,
   Dimensions,
   Image,
-  StatusBar,
-  TouchableOpacity,
-  Button
+  Button,
 } from 'react-native';
-const image = {uri: 'https://reactjs.org/logo-og.png'};
 const {width, height} = Dimensions.get('screen');
 const Welcome = ({navigation}) => {
   return (
@@ -30,14 +27,17 @@ const Welcome = ({navigation}) => {
       </View>
 
       <View style={styles.btnsWrapper}>
-              <Button title='Log in' width={'80%'}
-                  onPress={() => navigation.navigate("Login")
-                  } 
-                  />
-              <Button title='Create an account' width={'80%'}
-                  onPress={() => navigation.navigate("Register")
-                  } />
-          </View>
+        <Button
+          title="Log in"
+          width={'80%'}
+          onPress={() => navigation.navigate('Login')}
+        />
+        <Button
+          title="Create an account"
+          width={'80%'}
+          onPress={() => navigation.navigate('Register')}
+        />
+      </View>
     </ImageBackground>
   );
 };
