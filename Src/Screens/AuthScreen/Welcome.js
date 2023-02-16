@@ -11,13 +11,12 @@ import {
 } from 'react-native';
 const {width, height} = Dimensions.get('screen');
 const Welcome = ({navigation}) => {
+  
   return (
-    <ImageBackground
-      style={styles.container}
-      source={require('./assests/welcome.jpg')}>
+    <View style={{backgroundColor: 'pink'}}>
       <Image
         style={styles.fullWidthImage}
-        source={require('./assests/welcome_wallet.png')}
+        source={require('../assests/welcome_wallet.png')}
       />
 
       <View
@@ -38,7 +37,7 @@ const Welcome = ({navigation}) => {
           onPress={() => navigation.navigate('Register')}
         />
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

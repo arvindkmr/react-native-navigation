@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Login from '../../Screens/AuthScreen/Login';
-import Welcome from '../../Screens/AuthScreen/Welcome';
-import Register from '../../Screens/AuthScreen/Register';
-import Forgot from '../../Screens/AuthScreen/Forgot';
+import Login from '../Screens/AuthScreen/Login';
+import Welcome from '../Screens/AuthScreen/Welcome';
+import Register from '../Screens/AuthScreen/Register';
+import Forgot from '../Screens/AuthScreen/Forgot';
 
 const Stack = createNativeStackNavigator();
 
 const AuthStack = () => {
   const {isFirstLaunch, setIsFirstLaunch} = useState(true);
-
+  
   return (
     <Stack.Navigator initialRouteName={'Welcome'}>
       <Stack.Screen
