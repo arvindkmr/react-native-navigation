@@ -15,12 +15,12 @@ const AuthStack = () => {
       <Stack.Screen
         name="Login"
         component={Login}
-        options={{headerShown: false}}
+        // options={{headerShown: false}}
       />
       <Stack.Screen
         name="Welcome"
         component={Welcome}
-        options={{headerShown: false}}
+        // options={{headerShown: false}}
       />
       <Stack.Screen
         name="Register"

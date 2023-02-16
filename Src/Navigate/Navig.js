@@ -20,13 +20,13 @@ const Navig = () => {
   else
     return (
       <NavigationContainer>
-        {/* {
+        {
                 userToken
                     ?
                     <AuthStack /> :
                     <AppStack />
-                } */}
-        <AuthStack />
+                }
+
       </NavigationContainer>
     );
 };

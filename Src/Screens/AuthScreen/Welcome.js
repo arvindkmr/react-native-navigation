@@ -13,7 +13,7 @@ const {width, height} = Dimensions.get('screen');
 const Welcome = ({navigation}) => {
   
   return (
-    <View style={{backgroundColor: 'pink'}}>
+    <View >
       <Image
         style={styles.fullWidthImage}
         source={require('../assests/welcome_wallet.png')}
