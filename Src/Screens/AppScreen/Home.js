@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Text,Button} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Touchable } from 'react-native/Libraries/Components/Touchable/Touchable';
 
 const Home = ({navigation}) => {
   return (
